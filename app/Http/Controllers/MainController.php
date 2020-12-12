@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\SiteText;
 use Illuminate\Http\Request;
 
 class MainController extends Controller
@@ -9,7 +10,8 @@ class MainController extends Controller
 
   public function index()
   {
-    return view('pages/index');
+    $text = SiteText::Where('section', "slider")->get();
+    return view('pages/index', ['texts' => $text]);
   }
 
   public function blog()
