@@ -3,7 +3,7 @@
   <div class="about">
     <div class="row">
       <div class="recent">
-        <button class="btn-primarys"><h3>About us</h3></button>
+        <button class="btn-primarys"><h3>{{ $decodeJson['about_us'] }}</h3></button>
         <hr>
       </div>
     </div>

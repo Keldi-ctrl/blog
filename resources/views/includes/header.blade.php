@@ -4,7 +4,13 @@
       <div class="container-fluid">
         <div class="navbar-header">
           <div class="navbar-brand">
-            <a href="{{ url('/') }}"><h1>Bema</h1></a>
+            <a href="{{ url('/') }}">
+              <h1>
+                @isset($siteName)
+                  <h1>{{ $siteName }}</h1> @else <h1>Blog</h1>
+                @endisset
+              </h1>
+            </a>
           </div>
         </div>
         <div class="menu">

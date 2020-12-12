@@ -10,8 +10,13 @@ class MainController extends Controller
 
   public function index()
   {
-    $text = SiteText::Where('section', "slider")->get();
-    return view('pages/index', ['texts' => $text]);
+    $path = storage_path() . "/json/texts.json";
+    $decodeJson = json_decode(file_get_contents($path), true);
+    $texts = SiteText::Where('section', "slider")->get();
+    return view('pages/index', [
+      'texts' => $texts,
+      'decodeJson' => $decodeJson
+    ]);
   }
 
   public function blog()
