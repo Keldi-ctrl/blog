@@ -22,9 +22,9 @@
             <p>
               Voluptatem accusantium doloremque laudantium sprea totam rem aperiam.
             </p>
-            <div class="ficon">
+           {{-- <div class="ficon">
               <a href="" alt="">Learn more</a><i class="fa fa-long-arrow-right"></i>
-            </div>
+            </div>--}}
           </div>
         </div>
       </div>
@@ -39,9 +39,9 @@
             <p>
               Voluptatem accusantium doloremque laudantium sprea totam rem aperiam.
             </p>
-            <div class="ficon">
+           {{-- <div class="ficon">
               <a href="" alt="">Learn more</a> <i class="fa fa-long-arrow-right"></i>
-            </div>
+            </div>--}}
           </div>
         </div>
       </div>
@@ -56,9 +56,9 @@
             <p>
               Voluptatem accusantium doloremque laudantium sprea totam rem aperiam.
             </p>
-            <div class="ficon">
+            {{--<div class="ficon">
               <a href="" alt="">Learn more</a> <i class="fa fa-long-arrow-right"></i>
-            </div>
+            </div>--}}
           </div>
         </div>
       </div>

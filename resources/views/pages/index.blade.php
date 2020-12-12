@@ -16,21 +16,21 @@
         <div class="slides" data-group="slides">
           <ul>
             @foreach ($texts as $text)
-            <li>
-              <div class="slide-body" data-group="slide">
-                <img src="{{ asset($text['img_url']) }}" alt="">
-                <div class="caption header" data-animate="slideAppearUpToDown" data-delay="500" data-length="300">
-                  <button class="btn btn-primary"><h2> {{ $text['title'] }}</h2></button>
-                  <div class="caption-sub" data-animate="slideAppearDownToUp" data-delay="1200" data-length="300">
-                    <button class="btn btn-primary"><h4><span>{{ $text['title'] }}</span>
-                      </h4></button>
-                  </div>
-                  <div class="caption-sub" data-animate="slideAppearLeftToRight" data-delay="900" data-length="300">
-                    <button class="btn btn-primary"><h3>{{ $text['created_at'] }}</h3></button>
+              <li>
+                <div class="slide-body" data-group="slide">
+                  <img src="{{ asset($text['img_url']) }}" alt="">
+                  <div class="caption header" data-animate="slideAppearUpToDown" data-delay="500" data-length="300">
+                    <button class="btn btn-primary"><h2> {{ $text['title'] }}</h2></button>
+                    <div class="caption-sub" data-animate="slideAppearDownToUp" data-delay="1200" data-length="300">
+                      <button class="btn btn-primary"><h4><span>{{ $text['title'] }}</span>
+                        </h4></button>
+                    </div>
+                    <div class="caption-sub" data-animate="slideAppearLeftToRight" data-delay="900" data-length="300">
+                      <button class="btn btn-primary"><h3>{{ $text['created_at'] }}</h3></button>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </li>
+              </li>
             @endforeach
           </ul>
         </div>
@@ -103,7 +103,9 @@
 @include('includes.about')
 <!--/about-->
 
-@include('includes.our_team')
+<!--Отзывы-->
+@include('includes.reviews', ['reviewFromCustomer' => $decodeJson['review_from_customer'] ] )
+<!--/about-->
 
 <div class="container">
   <div class="row">
@@ -116,6 +118,6 @@
   @include('includes.footer')
 </footer>
 <!--end footer-->
- @include('includes.scripts')
+@include('includes.scripts')
 </body>
 </html>
