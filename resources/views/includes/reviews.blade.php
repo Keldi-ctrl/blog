@@ -2,7 +2,7 @@
 <div class="container">
   <div class="row">
     <div class="recent">
-      <button class="btn-primarys"><h3>Our Team</h3></button>
+      <button class="btn-primarys"><h3>{{ $reviewFromCustomer }}</h3></button>
       <hr>
     </div>
   </div>
