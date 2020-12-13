@@ -1,4 +1,5 @@
-@extends('layout.layout', ['title' => $decodeJson['index_page_title']])
+@extends('layout.layout')
+@section('title') {{ $decodeJson['index_page_title'] }} @endsection
 @section('content')
   <!-- Responsive slider - START -->
 <div class="slider">
@@ -104,4 +105,4 @@
     <hr>
   </div>
 </div>
-@endsection('content')
+@endsection
