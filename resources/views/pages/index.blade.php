@@ -1,4 +1,4 @@
-@extends('layout.layout')
+@extends('layout.layout', ['title' => $decodeJson['index_page_title']])
 @section('content')
   <!-- Responsive slider - START -->
 <div class="slider">

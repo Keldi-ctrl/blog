@@ -7,30 +7,44 @@ use Illuminate\Http\Request;
 
 class MainController extends Controller
 {
+  /**
+   * @var
+   */
+  public $decodedJson;
+
+  public function __construct()
+  {
+    $path = storage_path() . "/json/texts.json";
+    $this->decodedJson = json_decode(file_get_contents($path), true);
+  }
 
   public function index()
   {
-    $path = storage_path() . "/json/texts.json";
-    $decodeJson = json_decode(file_get_contents($path), true);
     $texts = SiteText::Where('section', "slider")->get();
     return view('pages/index', [
       'texts' => $texts,
-      'decodeJson' => $decodeJson
+      'decodeJson' => $this->decodedJson
     ]);
   }
 
   public function blog()
   {
-    return view('pages/blog');
+    return view('pages/blog', [
+      'decodeJson' => $this->decodedJson
+    ]);
   }
 
   public function portfolio()
   {
-    return view('pages/portfolio');
+    return view('pages/portfolio', [
+      'decodeJson' => $this->decodedJson
+    ]);
   }
 
   public function contact()
   {
-    return view('pages/contact');
+    return view('pages/contact', [
+      'decodeJson' => $this->decodedJson
+    ]);
   }
 }

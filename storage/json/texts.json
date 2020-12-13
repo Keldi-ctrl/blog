@@ -8,5 +8,9 @@
   "buy_it": "Buy It",
   "about_us": "О нас",
   "buy": "Купить",
-  "review_from_customer": "Отзывы"
+  "review_from_customer": "Отзывы",
+  "index_page_title": "Главная страница",
+  "blog_page_title": "Блог страница",
+  "portfolio_page_title": "Страница портфолио",
+  "contact_page_title": "Контакты"
 }
