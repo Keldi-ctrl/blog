@@ -1,12 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  @include('includes.head')
-</head>
-<body>
-<header>
-  @include('includes.header')
-</header>
+@extends('layout.layout')
+@section ('content')
 
 <div class="container">
   <div class="row">
@@ -72,11 +65,4 @@
     <hr>
   </div>
 </div>
-
-<footer>
-  @include('includes.footer')
-</footer>
-
-  @include('includes.scripts')
-</body>
-</html>
+@endsection ('content')

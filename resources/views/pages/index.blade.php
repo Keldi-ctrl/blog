@@ -1,14 +1,6 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-  @include('includes.head')
-</head>
-<body>
-<header>
-  @include('includes.header', ['siteName' => $decodeJson['site_name'] ])
-</header>
-
-<!-- Responsive slider - START -->
+@extends('layout.layout')
+@section('content')
+  <!-- Responsive slider - START -->
 <div class="slider">
   <div class="container">
     <div class="row">
@@ -112,12 +104,4 @@
     <hr>
   </div>
 </div>
-
-<!--start footer-->
-<footer>
-  @include('includes.footer')
-</footer>
-<!--end footer-->
-@include('includes.scripts')
-</body>
-</html>
+@endsection('content')
