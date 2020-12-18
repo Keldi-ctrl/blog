@@ -23,28 +23,28 @@ class MainController extends Controller
     $texts = SiteText::Where('section', "slider")->get();
     return view('pages/index', [
       'texts' => $texts,
-      'decodeJson' => $this->decodedJson
+      'decodedJson' => $this->decodedJson
     ]);
   }
 
   public function blog()
   {
     return view('pages/blog', [
-      'decodeJson' => $this->decodedJson
+      'decodedJson' => $this->decodedJson
     ]);
   }
 
   public function portfolio()
   {
     return view('pages/portfolio', [
-      'decodeJson' => $this->decodedJson
+      'decodedJson' => $this->decodedJson
     ]);
   }
 
   public function contact()
   {
     return view('pages/contact', [
-      'decodeJson' => $this->decodedJson
+      'decodedJson' => $this->decodedJson
     ]);
   }
 }

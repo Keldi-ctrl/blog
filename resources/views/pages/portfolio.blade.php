@@ -1,5 +1,5 @@
 @extends('layout.layout')
-@section('title') {{ $decodeJson['portfolio_page_title'] }} @endsection
+@section('title') {{ $decodedJson['portfolio_page_title'] }} @endsection
 @section('content')
 <div class="container">
   <div class="row">

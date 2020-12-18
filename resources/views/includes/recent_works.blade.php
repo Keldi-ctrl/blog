@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
     <div class="recent">
-      <button class="btn-primarys"><h3>{{ $decodeJson['my_recent_work'] }}</h3></button>
+      <button class="btn-primarys"><h3>{{ $decodedJson['my_recent_work'] }}</h3></button>
       <hr>
     </div>
   </div>

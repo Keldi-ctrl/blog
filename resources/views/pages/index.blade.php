@@ -1,5 +1,5 @@
 @extends('layout.layout')
-@section('title') {{ $decodeJson['index_page_title'] }} @endsection
+@section('title') {{ $decodedJson['index_page_title'] }} @endsection
 @section('content')
   <!-- Responsive slider - START -->
 <div class="slider">
@@ -40,8 +40,8 @@
   <div class="row">
     <div class="col-lg-12">
       <div class="contents">
-        <h2>{{ $decodeJson['create_your_outstanding'] }}</h2>
-        <p>{{ $decodeJson['create_your_outstanding_sub'] }}</p>
+        <h2>{{ $decodedJson['create_your_outstanding'] }}</h2>
+        <p>{{ $decodedJson['create_your_outstanding_sub'] }}</p>
       </div>
     </div>
   </div>
@@ -97,7 +97,7 @@
 <!--/about-->
 
 <!--Отзывы-->
-@include('includes.reviews', ['reviewFromCustomer' => $decodeJson['review_from_customer'] ] )
+@include('includes.reviews', ['reviewFromCustomer' => $decodedJson['review_from_customer'] ] )
 <!--/about-->
 
 <div class="container">
