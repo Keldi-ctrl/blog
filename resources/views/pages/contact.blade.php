@@ -1,4 +1,4 @@
-@extends('layout.layout', ['title' => $decodedJson['contact_page_title']])
+@extends('layout.layout')
 @section('title') {{ $decodedJson['contact_page_title'] }} @endsection
 @section ('content')
 

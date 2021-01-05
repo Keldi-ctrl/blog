@@ -31,11 +31,17 @@
           </div>
           <div class="menu">
             <ul class="nav nav-tabs" role="tablist">
-              <li role="presentation" class="active"><a href="{{ url('/') }}">Home</a></li>
+              {{--
+              {{ Request::path() ==  'portfolio' ? 'active' : ''  }}
+              {{ request()->is('portfolio') ? 'active' : '' }}
+              --}}
+              <li role="presentation" class="{{ request()->is('/') ? 'active' : '' }}"><a href="{{ url('/') }}">Home</a></li>
 
-              <li role="presentation"><a href="{{ url('/blog') }}">blog</a></li>
-              <li role="presentation"><a href="{{ url('/portfolio') }}">Portfolio</a></li>
-              <li role="presentation"><a href="{{ url('/contact') }}">Contact</a></li>
+              <li role="presentation" class="{{ request()->is('blog') ? 'active' : '' }}"><a href="{{ url('/blog') }}">blog</a></li>
+
+              <li role="presentation" class="{{ request()->is('portfolio') ? 'active' : '' }}"><a href="{{ url('/portfolio') }}">Portfolio</a></li>
+
+              <li role="presentation" class="{{ request()->is('contact') ? 'active' : '' }}"><a href="{{ url('/contact') }}">Contact</a></li>
             </ul>
           </div>
         </div>
@@ -136,7 +142,6 @@
 </footer>
 <!--end footer-->
 
-<script type="text/javascript" src="{{ URL::asset('js/custom.js') }}"></script>
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script type="text/javascript" src="{{ URL::asset('js/jquery.js') }}"></script>
 {{--<script src="js/jquery.js"></script>--}}
@@ -154,5 +159,7 @@
     {})
   .init();
 </script>
+<script type="text/javascript" src="{{ URL::asset('js/custom.js') }}"></script>
+
 </body>
 </html>
